@@ -20,14 +20,23 @@ LOGGER = get_logger(__name__)
 
 def run():
     st.set_page_config(
-        page_title="Hello",
-        page_icon="👋",
+        page_title="firstpage",
+        initial_sidebar_state="collapsed",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
+    st.markdown(
+    """
+    <style>
+    [data-testid="collapsedControl"] {
+        display: none
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
-    st.sidebar.success("Select a demo above.")
-
+    st.write("# First Streamlit App!")
+    st.text_input("Input something","")
 
 
 if __name__ == "__main__":
