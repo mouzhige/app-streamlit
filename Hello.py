@@ -36,7 +36,8 @@ def run():
 )
 
     st.write("# First Streamlit App!")
-    st.text_input("Input something","")
+    getthetext = st.text_input("Input something","")
+    st.write(getthetext)
 
 
 if __name__ == "__main__":
